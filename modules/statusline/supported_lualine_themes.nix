@@ -1,4 +1,5 @@
 [
+  "auto"
   "borealis"
   "tokyonight"
   "onedark"

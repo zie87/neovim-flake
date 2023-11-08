@@ -147,8 +147,9 @@ in {
       "<right>" = "<nop>";
     };
 
-    vim.nnoremap = mkIf cfg.mapLeaderSpace {"<space>" = "<nop>";};
+    # vim.nnoremap = mkIf cfg.mapLeaderSpace {"<space>" = "<nop>";};
 
+    # TODO: port to lua
     vim.configRC.basic = nvim.dag.entryAfter ["globalsScript"] ''
       " Settings that are set for everything
       set encoding=utf-8
@@ -203,8 +204,8 @@ in {
         set clipboard+=unnamedplus
       ''}
       ${optionalString cfg.mapLeaderSpace ''
-        let mapleader=" "
-        let maplocalleader=" "
+        let mapleader="-"
+        let maplocalleader="#"
       ''}
       ${optionalString cfg.syntaxHighlighting ''
         syntax on

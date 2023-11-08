@@ -167,6 +167,10 @@
       url = "github:Gako358/borealis.nvim";
       flake = false;
     };
+    doom-one = {
+      url = "github:NTBBloodbath/doom-one.nvim";
+      flake = false;
+    };
 
     # Rust crates
     crates-nvim = {
@@ -280,6 +284,7 @@
       "nvim-autopairs"
       "nvim-ts-autotag"
       "borealis"
+      "doom-one"
       "crates-nvim"
       "gitsigns-nvim"
       "lazygit"
@@ -396,11 +401,11 @@
         };
         vim.statusline.lualine = {
           enable = overrideable true;
-          theme = overrideable "borealis";
+          theme = overrideable "auto";
         };
         vim.theme = {
           enable = overrideable true;
-          name = overrideable "borealis";
+          name = overrideable "doom-one";
         };
         vim.telescope.enable = overrideable true;
         vim.treesitter.context.enable = overrideable true;
